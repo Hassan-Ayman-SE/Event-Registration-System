@@ -16,7 +16,7 @@ namespace Event_Registration_System.Services
         {
             var apiKey = _configuration["SendGrid:ApiKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("no-reply@eventregistration.com", "Event Registration");
+            var from = new EmailAddress("hasankarraz7@gmail.com", "Event Registration");
             var subject = "Event Registration Confirmation";
             var to = new EmailAddress(toEmail, participantName);
             var plainTextContent = $"Hello {participantName}, you have successfully registered for {eventTitle}.";
